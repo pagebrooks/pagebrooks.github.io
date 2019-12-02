@@ -162,6 +162,5 @@ h2 {
 }
 @media screen and (max-width: 480px) { /* mobile */ 
 	#main { width: 340px; }
-	body { font-size: 0.8em; }
 }
 
