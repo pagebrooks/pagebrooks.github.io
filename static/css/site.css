@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #171a26;
+    color: #d9e1ff;
+
+    /*#171a26
+    #383c4c
+    #5d6175
+    #848aa1
+    #aeb4cf
+    #d9e1ff
+
+
+    #171a26
+#332945
+#5d345c
+#8e3c67
+#bd4663
+e35a53
+#fa7c39
+#ffa600 */
+}
+
+#main {
+    margin: 0 auto;
+    width: 600px;
+}
+ul.menu {
+	list-style-type: none;
+	margin: 35px 0;
+	padding: 0;
+	margin-bottom: 600px;
+	background-color: #171a26;
+}
+
+.menu {
+	text-align: center;
+	background-color: #171a26;
+	padding: 20px 0;
+}
+#icon-menu {
+   text-align: center;
+}
+#icon-menu svg {
+   padding: 8px;
+   
+}
+
+a.anchor {
+	display: block;
+	position: relative;
+	top: -80px;
+	visibility: hidden;
+}
+
+
+.menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.menu ul li {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+.menu a:link, .menu a:visited {
+	text-decoration: none;
+}
+
+.menu ul li:not(:first-child):before {
+	content: '|';
+	margin-left: 10px;
+	margin-right: 12px;
+}	
+
+.section {
+	margin-top: 500px;
+}
+
+.nav-home {
+	text-decoration: none;
+	font-size: 0.7em;
+	font-weight: bold;
+}
+
+
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+        -webkit-box-shadow: 0px 10px 12px -14px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 10px 12px -14px rgba(0,0,0,0.75);
+        box-shadow: 0px 10px 12px -14px rgba(0,0,0,0.75);	
+}
+
+.content {
+}
+
+.sticky + .content {
+	padding-top: 59px;
+}
+
+a:link {
+  color: #bd4663;
+}
+
+a:visited {
+  color: #bd4663;
+}
+
+em {
+	color: #bed3ff;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 10px 0px;
+}
+
+footer {
+    margin-top: 550px;
+    margin-bottom: 50px;
+    color: #fa7c39;
+    text-align: center;
+}
+
+h2 {
+    color: #fa7c39;
+    margin: 0;
+}
+
+.job {
+	margin-bottom: 25px;
+}
+
+.job h1 {
+	font-size: 1em;
+	margin: 0;
+}
+
+.job h2 {
+	color: #e35a53;
+	font-weight: normal;
+	font-size: 0.9em;
+}
+
+.job  span.title {
+	color: #bd4663;
+}
+@media screen and (max-width: 1020px) { /* Large Desktop */ 
+}
+@media screen and (max-width: 780px) { /* tablet */ 
+	#main { width: 600px; }
+}
+@media screen and (max-width: 480px) { /* mobile */ 
+	#main { width: 340px; }
+	body { font-size: 0.8em; }
+}
+

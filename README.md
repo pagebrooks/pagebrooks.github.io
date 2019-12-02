@@ -1,2 +1,2 @@
-# pagebrooks.github.io
-Personal Blog
+# My Personal Site
+[PageBrooks.com](https://pagebrooks.com)
