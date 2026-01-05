@@ -27,7 +27,16 @@ e35a53
 
 #main {
     margin: 0 auto;
-    width: 600px;
+    max-width: 600px;
+    width: 90%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Make profile image responsive */
+#main img {
+    max-width: 100%;
+    height: auto;
 }
 ul.menu {
 	list-style-type: none;
@@ -155,12 +164,131 @@ h2 {
 .job  span.title {
 	color: #bd4663;
 }
-@media screen and (max-width: 1020px) { /* Large Desktop */ 
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+    .section {
+        margin-top: 300px;
+    }
+
+    footer {
+        margin-top: 300px;
+    }
+
+    ul.menu {
+        margin-bottom: 300px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
 }
-@media screen and (max-width: 780px) { /* tablet */ 
-	#main { width: 600px; }
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+    #main {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    /* Reduce header spacing */
+    #main > div:first-child {
+        margin-top: 40px !important;
+    }
+
+    /* Smaller profile image on mobile */
+    #main img[src*="pb.png"] {
+        width: 150px;
+    }
+
+    /* Reduce section spacing significantly */
+    .section {
+        margin-top: 150px;
+    }
+
+    /* Reduce menu bottom margin */
+    ul.menu {
+        margin-bottom: 150px;
+        margin-top: 20px;
+    }
+
+    /* Make menu items stack or wrap nicely */
+    .menu ul li {
+        display: inline-block;
+        margin: 5px 0;
+    }
+
+    .menu ul li:not(:first-child):before {
+        margin-left: 6px;
+        margin-right: 8px;
+    }
+
+    /* Increase touch target size for links */
+    .menu a {
+        padding: 10px 5px;
+        display: inline-block;
+    }
+
+    /* Reduce typography sizes */
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    /* Reduce footer margin */
+    footer {
+        margin-top: 150px;
+        margin-bottom: 30px;
+    }
+
+    /* Anchor offset adjustment for smaller screens */
+    a.anchor {
+        top: -60px;
+    }
+
+    /* Sticky menu padding adjustment */
+    .sticky + .content {
+        padding-top: 50px;
+    }
+
+    /* Job section adjustments */
+    .job {
+        margin-bottom: 20px;
+    }
+
+    .job ul {
+        padding-left: 20px;
+    }
+
+    /* Icon menu adjustments */
+    #icon-menu svg {
+        width: 35px;
+        padding: 10px;
+    }
 }
-@media screen and (max-width: 480px) { /* mobile */ 
-	#main { width: 340px; }
+
+/* Small mobile styles */
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 1.75em;
+    }
+
+    .section {
+        margin-top: 100px;
+    }
+
+    ul.menu {
+        margin-bottom: 100px;
+    }
+
+    footer {
+        margin-top: 100px;
+    }
+
+    #main img[src*="pb.png"] {
+        width: 120px;
+    }
 }
 
