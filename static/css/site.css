@@ -1,5 +1,28 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
+/* Skip link - visually hidden until focused */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #e35a53;
+    color: #171a26;
+    padding: 8px 16px;
+    z-index: 100;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus {
+    outline: 2px solid #fa7c39;
+    outline-offset: 2px;
+}
 
 body{
     font-family: 'Roboto', sans-serif;
