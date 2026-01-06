@@ -3,6 +3,12 @@ console.log("👋 If you're checking my console, you either want to hire me or d
 document.addEventListener("DOMContentLoaded", function() {
    var menu = document.getElementById("menu");
    var initialMenuOffset = menu.offsetTop;
+
+   // Show menu after layout is stable to prevent flicker
+   requestAnimationFrame(function() {
+      menu.classList.add("ready");
+   });
+
    window.onscroll = function() {
       if(window.pageYOffset > initialMenuOffset) {
          menu.classList.add("sticky");

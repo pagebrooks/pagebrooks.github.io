@@ -50,6 +50,12 @@ ul.menu {
 	text-align: center;
 	background-color: #171a26;
 	padding: 20px 0;
+	opacity: 0;
+	transition: opacity 0.2s ease-in;
+}
+
+.menu.ready {
+	opacity: 1;
 }
 #icon-menu {
    text-align: center;
