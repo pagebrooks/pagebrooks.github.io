@@ -9,3 +9,21 @@ window.onscroll = function() {
 	   menu.classList.remove("sticky");
    }
 };
+
+// Typing effect for tagline
+(function() {
+   var tagline = document.getElementById("tagline");
+   var text = "Computers love to read what I write.";
+   var index = 0;
+   var typingSpeed = 50;
+
+   function type() {
+      if (index < text.length) {
+         tagline.textContent += text.charAt(index);
+         index++;
+         setTimeout(type, typingSpeed);
+      }
+   }
+
+   type();
+})();
