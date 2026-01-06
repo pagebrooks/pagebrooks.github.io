@@ -65,7 +65,6 @@ ul.menu {
 	list-style-type: none;
 	margin: 35px 0;
 	padding: 0;
-	margin-bottom: 600px;
 	background-color: #171a26;
 }
 
@@ -118,7 +117,7 @@ ul.menu {
 }	
 
 .section {
-	margin-top: 500px;
+	margin-top: 50px;
 }
 
 .nav-home {
@@ -164,7 +163,7 @@ h1 {
 }
 
 footer {
-    margin-top: 550px;
+    margin-top: 50px;
     margin-bottom: 50px;
     color: #fa7c39;
     text-align: center;
@@ -195,22 +194,10 @@ h2 {
 }
 
 .job  span.title {
-	color: #bd4663;
+	color: #aeb4cf;
 }
 /* Tablet styles */
 @media screen and (max-width: 768px) {
-    .section {
-        margin-top: 300px;
-    }
-
-    footer {
-        margin-top: 300px;
-    }
-
-    ul.menu {
-        margin-bottom: 300px;
-    }
-
     h1 {
         font-size: 2.5em;
     }
@@ -231,17 +218,6 @@ h2 {
     /* Smaller profile image on mobile */
     #main img[src*="pb.png"] {
         width: 150px;
-    }
-
-    /* Reduce section spacing significantly */
-    .section {
-        margin-top: 150px;
-    }
-
-    /* Reduce menu bottom margin */
-    ul.menu {
-        margin-bottom: 150px;
-        margin-top: 20px;
     }
 
     /* Make menu items stack or wrap nicely */
@@ -268,12 +244,6 @@ h2 {
 
     h2 {
         font-size: 1em;
-    }
-
-    /* Reduce footer margin */
-    footer {
-        margin-top: 150px;
-        margin-bottom: 30px;
     }
 
     /* Anchor offset adjustment for smaller screens */
@@ -306,18 +276,6 @@ h2 {
 @media screen and (max-width: 360px) {
     h1 {
         font-size: 1.75em;
-    }
-
-    .section {
-        margin-top: 100px;
-    }
-
-    ul.menu {
-        margin-bottom: 100px;
-    }
-
-    footer {
-        margin-top: 100px;
     }
 
     #main img[src*="pb.png"] {
