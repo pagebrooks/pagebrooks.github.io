@@ -84,9 +84,15 @@ ul.menu {
 #icon-menu {
    text-align: center;
 }
+#icon-menu a {
+   display: inline-block;
+}
 #icon-menu svg {
    padding: 8px;
-   
+}
+
+footer a {
+   display: inline-block;
 }
 
 .anchor {
@@ -165,10 +171,13 @@ h1 {
 }
 
 footer {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    color: #fa7c39;
+    margin-top: 100vh;
+    background-color: #0f1119;
+    color: #848aa1;
     text-align: center;
+    padding: 60px 20px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
 }
 
 h2 {
