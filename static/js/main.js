@@ -33,5 +33,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
    }
 
+   tagline.textContent = "";
    type();
 });
