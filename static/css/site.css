@@ -1,7 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 /* Skip link - visually hidden until focused */
-.skip-link {
+.skip-link,
+.skip-link:link,
+.skip-link:visited,
+.skip-link:focus {
     position: absolute;
     left: -9999px;
     z-index: 100;
