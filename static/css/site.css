@@ -146,6 +146,17 @@ footer a {
         box-shadow: 0px 10px 12px -14px rgba(0,0,0,0.75);
 }
 
+/* Cover Dynamic Island area to hide scrolling content behind it */
+.sticky::before {
+	content: '';
+	position: absolute;
+	top: calc(-1 * env(safe-area-inset-top, 0));
+	left: 0;
+	right: 0;
+	height: env(safe-area-inset-top, 0);
+	background-color: #171a26;
+}
+
 .content {
 	/* padding-top is set dynamically by JavaScript when menu becomes sticky */
 }
