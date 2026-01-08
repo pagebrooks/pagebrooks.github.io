@@ -175,6 +175,18 @@ footer {
     padding: 60px 20px;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
+    position: relative;
+}
+
+/* Extend footer background for iOS overscroll */
+footer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -100vh;
+    height: 100vh;
+    background-color: #0f1119;
 }
 
 h2 {
