@@ -147,10 +147,7 @@ footer a {
 }
 
 .content {
-}
-
-.sticky + .content {
-	padding-top: 59px;
+	/* padding-top is set dynamically by JavaScript when menu becomes sticky */
 }
 
 a:link {
@@ -260,11 +257,6 @@ h2 {
     /* Anchor offset adjustment for smaller screens */
     .anchor {
         top: -60px;
-    }
-
-    /* Sticky menu padding adjustment */
-    .sticky + .content {
-        padding-top: 50px;
     }
 
     /* Job section adjustments */
