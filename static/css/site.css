@@ -26,10 +26,14 @@ button:focus {
     outline-offset: 2px;
 }
 
+html {
+    background-color: #171a26;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: #171a26;
+    background-color: #0f1119;
     color: #d9e1ff;
 
     /*#171a26
@@ -54,8 +58,11 @@ e35a53
     margin: 0 auto;
     max-width: 600px;
     width: 90%;
-    padding: 0 15px;
+    padding: 1px 15px 100px;
     box-sizing: border-box;
+    background-color: #171a26;
+    box-shadow: 0 0 0 100vmax #171a26;
+    clip-path: inset(0 -100vmax);
 }
 
 /* Make profile image responsive */
@@ -179,7 +186,7 @@ h1 {
 }
 
 footer {
-    margin-top: 100vh;
+    margin-top: 50px;
     background-color: #0f1119;
     color: #848aa1;
     text-align: center;
@@ -187,17 +194,6 @@ footer {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     position: relative;
-}
-
-/* Extend footer background for iOS overscroll */
-footer::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -100vh;
-    height: 100vh;
-    background-color: #0f1119;
 }
 
 h2 {
