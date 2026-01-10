@@ -1,6 +1,81 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-/* Skip link - visually hidden until focused */
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+html {
+    background-color: #171a26;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #0f1119;
+    color: #d9e1ff;
+}
+
+a:link,
+a:visited {
+    color: #e35a53;
+}
+
+a:focus,
+button:focus {
+    outline: 2px solid #fa7c39;
+    outline-offset: 2px;
+}
+
+em {
+    color: #bed3ff;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+h2 {
+    color: #fa7c39;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+#main {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 90%;
+    padding: 1px 15px 100px;
+    box-sizing: border-box;
+    background-color: #171a26;
+    box-shadow: 0 0 0 100vmax #171a26;
+    clip-path: inset(0 -100vmax);
+}
+
+#main img {
+    max-width: 100%;
+    height: auto;
+}
+
+#tagline {
+    min-height: 1.5em;
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.content {
+    /* padding-top is set dynamically by JavaScript when menu becomes sticky */
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
 .skip-link,
 .skip-link:link,
 .skip-link:visited,
@@ -19,171 +94,101 @@
     top: 0;
 }
 
-/* Focus styles for keyboard navigation */
-a:focus,
-button:focus {
-    outline: 2px solid #fa7c39;
-    outline-offset: 2px;
+.anchor {
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
 }
 
-html {
-    background-color: #171a26;
-}
+/* ==========================================================================
+   Navigation Menu
+   ========================================================================== */
 
-body{
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    background-color: #0f1119;
-    color: #d9e1ff;
-
-    /*#171a26
-    #383c4c
-    #5d6175
-    #848aa1
-    #aeb4cf
-    #d9e1ff
-
-
-    #171a26
-#332945
-#5d345c
-#8e3c67
-#bd4663
-e35a53
-#fa7c39
-#ffa600 */
-}
-
-#main {
-    margin: 0 auto;
-    max-width: 600px;
-    width: 90%;
-    padding: 1px 15px 100px;
-    box-sizing: border-box;
-    background-color: #171a26;
-    box-shadow: 0 0 0 100vmax #171a26;
-    clip-path: inset(0 -100vmax);
-}
-
-/* Make profile image responsive */
-#main img {
-    max-width: 100%;
-    height: auto;
-}
 ul.menu {
-	list-style-type: none;
-	margin: 35px 0;
-	padding: 0;
-	background-color: #171a26;
+    list-style-type: none;
+    margin: 35px 0;
+    padding: 0;
+    background-color: #171a26;
 }
 
 .menu {
-	text-align: center;
-	background-color: #171a26;
-	padding: 20px 0;
-	opacity: 0;
-	transition: opacity 0.2s ease-in;
+    text-align: center;
+    background-color: #171a26;
+    padding: 20px 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
 }
 
 .menu.ready {
-	opacity: 1;
+    opacity: 1;
 }
-#icon-menu {
-   text-align: center;
-}
-#icon-menu a {
-   display: inline-block;
-}
-#icon-menu svg {
-   padding: 8px;
-}
-
-footer a {
-   display: inline-block;
-}
-
-.anchor {
-	display: block;
-	position: relative;
-	top: -80px;
-	visibility: hidden;
-}
-
 
 .menu ul {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .menu ul li {
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-}
-
-.menu a:link, .menu a:visited {
-	text-decoration: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 
 .menu ul li:not(:first-child):before {
-	content: '|';
-	margin-left: 10px;
-	margin-right: 12px;
-}	
+    content: '|';
+    margin-left: 10px;
+    margin-right: 12px;
+}
 
-.section {
-	margin-top: 50px;
+.menu a:link,
+.menu a:visited {
+    text-decoration: none;
 }
 
 .nav-home {
-	text-decoration: none;
-	font-size: 0.7em;
-	font-weight: bold;
+    text-decoration: none;
+    font-size: 0.7em;
+    font-weight: bold;
 }
-
-
 
 .sticky {
-	position: fixed;
-	top: env(safe-area-inset-top, 0);
-	left: 0;
-	width: 100%;
-        -webkit-box-shadow: 0px 10px 12px -14px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 10px 12px -14px rgba(0,0,0,0.75);
-        box-shadow: 0px 10px 12px -14px rgba(0,0,0,0.75);
+    position: fixed;
+    top: env(safe-area-inset-top, 0);
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 12px -14px rgba(0, 0, 0, 0.75);
 }
 
-/* Cover Dynamic Island area to hide scrolling content behind it */
 .sticky::before {
-	content: '';
-	position: absolute;
-	top: calc(-1 * env(safe-area-inset-top, 0));
-	left: 0;
-	right: 0;
-	height: env(safe-area-inset-top, 0);
-	background-color: #171a26;
+    content: '';
+    position: absolute;
+    top: calc(-1 * env(safe-area-inset-top, 0));
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top, 0);
+    background-color: #171a26;
 }
 
-.content {
-	/* padding-top is set dynamically by JavaScript when menu becomes sticky */
+/* ==========================================================================
+   Icon Menu
+   ========================================================================== */
+
+#icon-menu {
+    text-align: center;
 }
 
-a:link {
-  color: #e35a53;
+#icon-menu a {
+    display: inline-block;
 }
 
-a:visited {
-  color: #e35a53;
+#icon-menu svg {
+    padding: 8px;
 }
 
-em {
-	color: #bed3ff;
-}
-
-h1 {
-  font-size: 3em;
-  margin: 10px 0px;
-}
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
 footer {
     margin-top: 50px;
@@ -196,58 +201,59 @@ footer {
     position: relative;
 }
 
-h2 {
-    color: #fa7c39;
-    margin: 0;
+footer a {
+    display: inline-block;
 }
 
-#tagline {
-    min-height: 1.5em;
-}
+/* ==========================================================================
+   Jobs / Projects
+   ========================================================================== */
 
 .job {
-	margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .job h3 {
-	font-size: 1em;
-	margin: 0;
+    font-size: 1em;
+    margin: 0;
 }
 
 .job h2 {
-	color: #e35a53;
-	font-weight: normal;
-	font-size: 0.9em;
+    color: #e35a53;
+    font-weight: normal;
+    font-size: 0.9em;
 }
 
-.job  span.title {
-	color: #aeb4cf;
+.job span.title {
+    color: #aeb4cf;
 }
-/* Tablet styles */
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+
+/* Tablet */
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 2.5em;
     }
 }
 
-/* Mobile styles */
+/* Mobile */
 @media screen and (max-width: 480px) {
     #main {
         width: 95%;
         padding: 0 10px;
     }
 
-    /* Reduce header spacing */
     #main > div:first-child {
         margin-top: 40px !important;
     }
 
-    /* Smaller profile image on mobile */
     #main img[src*="pb.png"] {
         width: 150px;
     }
 
-    /* Make menu items stack or wrap nicely */
     .menu ul li {
         display: inline-block;
         margin: 5px 0;
@@ -258,13 +264,11 @@ h2 {
         margin-right: 8px;
     }
 
-    /* Increase touch target size for links */
     .menu a {
         padding: 10px 5px;
         display: inline-block;
     }
 
-    /* Reduce typography sizes */
     h1 {
         font-size: 2em;
     }
@@ -273,12 +277,10 @@ h2 {
         font-size: 1em;
     }
 
-    /* Anchor offset adjustment for smaller screens */
     .anchor {
         top: -60px;
     }
 
-    /* Job section adjustments */
     .job {
         margin-bottom: 20px;
     }
@@ -287,14 +289,13 @@ h2 {
         padding-left: 20px;
     }
 
-    /* Icon menu adjustments */
     #icon-menu svg {
         width: 35px;
         padding: 10px;
     }
 }
 
-/* Small mobile styles */
+/* Small Mobile */
 @media screen and (max-width: 360px) {
     h1 {
         font-size: 1.75em;
@@ -304,4 +305,3 @@ h2 {
         width: 120px;
     }
 }
-
